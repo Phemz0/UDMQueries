@@ -1,6 +1,6 @@
-(
-    target.process.command_line = "/.*pkexec.*/"  // pkexec command used in PwnKit exploitation
-)
+//Only for Linux 
+
+(target.process.command_line = "/.*pkexec.*/")  // pkexec command used in PwnKit exploitation
 and 
 (
     target.process.command_line = "/.*--.*/"  // Common arguments used with pkexec in PwnKit exploits
@@ -12,7 +12,5 @@ and
     or target.process.command_line = "/.*bash.*-i.*/"  // Command to spawn a root shell after privilege escalation
 )
 and 
-(
-    target.file.full_path = "/etc/pkexec"  // Access to pkexec-related system files
-)
+(target.file.full_path = "/etc/pkexec") // Access to pkexec-related system files
 
