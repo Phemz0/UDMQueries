@@ -1,0 +1,1 @@
+(target.process.command_line = /.*Offline_Winpwn.*/ nocase or target.process.command_line = /.*WinPwn .*/ nocase or target.process.command_line = /.*WinPwn\.exe.*/ nocase or target.process.command_line = /.*WinPwn\.ps1.*/ nocase)
