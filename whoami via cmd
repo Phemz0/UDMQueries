@@ -1,0 +1,5 @@
+target.process.command_line = /whoami/ and target.process.command_line = /groups/
+
+
+
+Adversely target.process.command_line = /whoami/  can be used on its own
