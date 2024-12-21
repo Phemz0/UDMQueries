@@ -1,0 +1,2 @@
+target.process.command_line = "mimikatz" or target.process.command_line = /mimikatz/
+ 
