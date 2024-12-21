@@ -1,0 +1,18 @@
+(
+    target.process.command_line = "/.*pkexec.*/"  // pkexec command used in PwnKit exploitation
+)
+and 
+(
+    target.process.command_line = "/.*--.*/"  // Common arguments used with pkexec in PwnKit exploits
+    or target.process.command_line = "/.*--no-auth.*/"  // Detecting `--no-auth` argument often used in the exploit
+)
+and 
+(
+    target.process.command_line = "/.*LD_PRELOAD.*/"  // Environment variable manipulation with LD_PRELOAD
+    or target.process.command_line = "/.*bash.*-i.*/"  // Command to spawn a root shell after privilege escalation
+)
+and 
+(
+    target.file.full_path = "/etc/pkexec"  // Access to pkexec-related system files
+)
+
