@@ -5,13 +5,13 @@ and
     or target.process.command_line = "/.*cudaHashcat64.*/"
     or target.process.command_line = "/.*oclHashcat64.*/"
 )
-and 
+and // or also works here, depends on specifications 
 (
     target.process.command_line = "/.*-m.*/"  // hash type argument (e.g., -m 1000 for NTLM)
     or target.process.command_line = "/.*-a.*/"  // attack mode argument (e.g., -a 3 for mask attack)
     or target.process.command_line = "/.*-o.*/"  // output file argument (e.g., -o cracked.txt)
 )
 and 
-(security_result.action = "ALLOW" and security_result.severity = "HIGH")
+(security_result.action = "ALLOW")
 and 
 (network.direction = "OUTBOUND")
