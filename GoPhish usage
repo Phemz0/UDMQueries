@@ -1,7 +1,5 @@
 
-(
-    target.file.full_path = /gophish/ OR target.file.full_path = /gophish.exe/  // Gophish executable
-)
+( target.file.full_path = /gophish/ OR target.file.full_path = /gophish.exe/)// Gophish executable
 or 
 (
     target.process.command_line = "/.*-u.*/"  // URL argument (e.g., -u http://example.com)
