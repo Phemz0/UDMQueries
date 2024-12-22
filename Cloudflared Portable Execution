@@ -1,0 +1,2 @@
+target.process.file.full_path = /.*\\cloudflared\.exe$/ nocase and ((( not target.process.file.full_path = /.*:\\Program Files \(x86\)\\cloudflared\\.*/ nocase and  not target.process.file.full_path = /.*:\\Program Files\\cloudflared\\.*/ nocase)))
+ 
