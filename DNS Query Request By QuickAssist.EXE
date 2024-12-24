@@ -1,0 +1,1 @@
+target.process.file.full_path = /.*\\QuickAssist\.exe$/ nocase and network.dns.questions.name = /.*remoteassistance\.support\.services\.microsoft\.com$/ nocase
