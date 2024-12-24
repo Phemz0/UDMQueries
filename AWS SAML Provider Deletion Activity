@@ -1,0 +1,1 @@
+metadata.url_back_to_product = "iam.amazonaws.com" nocase and metadata.product_event_type = "DeleteSAMLProvider" nocase and network.http.response_code = "success" nocase
