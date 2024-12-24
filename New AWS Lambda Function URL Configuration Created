@@ -1,0 +1,1 @@
+metadata.url_back_to_product = "lambda.amazonaws.com" nocase and metadata.product_event_type = "CreateFunctionUrlConfig" nocase
