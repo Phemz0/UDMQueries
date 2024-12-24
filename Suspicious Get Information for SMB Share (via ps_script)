@@ -1,0 +1,1 @@
+target.process.command_line = /.*get-smbshare.*/ nocase
