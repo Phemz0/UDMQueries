@@ -1,0 +1,1 @@
+target.process.command_line = /.*\\appcmd\.exe$/ nocase and target.process.command_line = /.*module.*/ nocase
