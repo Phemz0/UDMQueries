@@ -1,1 +1,12 @@
-target.file.full_path = /.*\\AppData\\Roaming\\.*/ nocase and (target.file.full_path = /.*\\mydata\\.*/ nocase or target.file.full_path = /.*\\datalogs\\.*/ nocase or target.file.full_path = /.*\\hvnc\\.*/ nocase or target.file.full_path = /.*\\dcrat\\.*/ nocase) and (target.file.full_path = /.*\\datalogs\.conf$/ nocase or target.file.full_path = /.*\\hvnc\.conf$/ nocase or target.file.full_path = /.*\\dcrat\.conf$/ nocase)
+target.file.full_path = /.*\\AppData\\Roaming\\.*$/ nocase 
+and (
+    target.file.full_path = /.*\\mydata\\.*$/ nocase 
+    or target.file.full_path = /.*\\datalogs\\.*$/ nocase 
+    or target.file.full_path = /.*\\hvnc\\.*$/ nocase 
+    or target.file.full_path = /.*\\dcrat\\.*$/ nocase
+) 
+and (
+    target.file.full_path = /.*\\datalogs\\.conf$/ nocase 
+    or target.file.full_path = /.*\\hvnc\\.conf$/ nocase 
+    or target.file.full_path = /.*\\dcrat\\.conf$/ nocase
+)
