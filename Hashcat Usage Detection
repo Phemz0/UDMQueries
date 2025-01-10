@@ -11,3 +11,8 @@ and // or also works here, depends on specifications
     or target.process.command_line = "/.*-o.*/"  // output file argument (e.g., -o cracked.txt)
 )
 
+
+
+
+
+// HashCat is a password cracking tool used for (mostly) malicious reasons. 
