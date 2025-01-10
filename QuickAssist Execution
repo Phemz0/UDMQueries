@@ -1,1 +1,4 @@
 target.process.file.full_path = /.*\\QuickAssist\.exe$/ nocase
+
+
+//Quick Assist is a Microsoft Windows feature that allows a user to view or control a remote Windows computer over a network or the Internet 
