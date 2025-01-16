@@ -1,1 +1,5 @@
-principal.process.file.full_path = /.*\\more\.com$/ nocase and (target.process.file.full_path = /.*\\vbc\.exe$/ nocase or target.file.full_path = "vbc.exe" nocase)
+principal.process.file.full_path = /.*\\more\.com$/ nocase and 
+(
+target.process.file.full_path = /.*\\vbc\.exe$/ nocase or
+target.file.full_path = "vbc.exe" nocase
+)
