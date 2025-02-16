@@ -1,0 +1,1 @@
+(metadata.event_type = "RESOURCE_CREATION" OR metadata.event_type = "USER_RESOURCE_CREATION") AND (principal.resource.resource_type = "STORAGE_BUCKET" OR target.resource.resource_type = "STORAGE_BUCKET") AND (metadata.vendor_name = "Google Cloud Platform")
