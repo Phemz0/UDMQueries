@@ -1,3 +1,6 @@
+//This search doesnt work in all customer environments
+
+
 target.process.command_line = /powershell\.exe -EncodedCommand/ //This matches when an adversary is attemping to encode their commands to evade detection
 OR target.process.command_line = /powershell\.exe IEX \(New-Object Net\.WebClient\)\.DownloadString/ //This matches when a remote script is executed (Remote File Download & Execution)
 OR target.process.command_line = /System\.Management\.Automation\.AmsiUtils/ // This partially matches when an adversary is attempting to evade antivirus (AMSI Bypass (Antivirus Evasion))
