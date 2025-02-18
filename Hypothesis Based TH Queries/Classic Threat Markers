@@ -1,4 +1,4 @@
-//This search doesnt work in all customer environments
+//This search doesnt work in all customer environments, please modify mime UDM field to match the environment to fix this issue. 
 
 
 target.process.command_line = /powershell\.exe -EncodedCommand/ //This matches when an adversary is attemping to encode their commands to evade detection
