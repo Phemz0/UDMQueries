@@ -1,7 +1,7 @@
 // this search looks for commonly used commands on Linux by attackers
 // comments explaining malicious use(s) for the command
 
-// network Reconnaissance and Scanning
+// network reconnaissance and scanning
 
 target.process.command_line = /^nmap/ OR //scanning for open ports, services and vulnerabilities
 target.process.command_line = /^ping/ OR // determine if a target is online (also to flood a target with ICMP packets for denial of service attacks)
