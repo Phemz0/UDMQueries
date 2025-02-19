@@ -6,25 +6,5 @@ OR target.process.command_line = /powershell\.exe IEX \(New-Object Net\.WebClien
 OR target.process.command_line = /System\.Management\.Automation\.AmsiUtils/ // This partially matches when an adversary is attempting to evade antivirus (AMSI Bypass (Antivirus Evasion))
 OR target.process.command_line = /Invoke-ReflectivePEInjection/ OR target.process.command_line = /mimikatz/ //(In-Memory Execution) / credential dumping without a write file
 OR target.process.command_line = /rundll32\.exe C:\\Windows\\System32\\comsvcs.dll, MiniDump <LSASS_PID> C:\\temp\\lsass\.dmp/ OR //LSASS credential dumping exact command
-//end of commands
-//start of file paths. This section detects when compressed files are found in the temp dir, this is a marker of data exfil.
-(file_path = /C:\\Temp\\/ AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
-OR (file_path = /C:\\Windows\\Temp\\/ AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
-OR (file_path = /C:\\Users\\w\AppData\\Local\\Temp\\/ AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
-OR (file_path = /\/home\/\w\/Documents\// AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
- OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
+//end of commands more to be added in time 
+
