@@ -5,6 +5,10 @@ target.process.command_line = /powershell\.exe -EncodedCommand/ //This matches w
 OR target.process.command_line = /powershell\.exe IEX \(New-Object Net\.WebClient\)\.DownloadString/ //This matches when a remote script is executed (Remote File Download & Execution)
 OR target.process.command_line = /System\.Management\.Automation\.AmsiUtils/ // This partially matches when an adversary is attempting to evade antivirus (AMSI Bypass (Antivirus Evasion))
 OR target.process.command_line = /Invoke-ReflectivePEInjection/ OR target.process.command_line = /mimikatz/ //(In-Memory Execution) / credential dumping without a write file
-OR target.process.command_line = /rundll32\.exe C:\\Windows\\System32\\comsvcs.dll, MiniDump <LSASS_PID> C:\\temp\\lsass\.dmp/ OR //LSASS credential dumping exact command
+OR target.process.command_line = /rundll32\.exe C:\\Windows\\System32\\comsvcs.dll, MiniDump <LSASS_PID> C:\\temp\\lsass\.dmp/ //LSASS credential dumping exact command
+OR target.process.command_line = /Clear-EventLog -LogName "Security"/ // Matches when event logs are cleared 
+OR target.process.command_line = /Invoke-Expression (Invoke-WebRequest -Uri "\w")/ //Run Scripts from Remote URL
+OR target.process.command_line = /New-LocalUser -Name/ //Creation of a new user
+OR target.process.command_line = /Set-ItemProperty -Path 'HKLM:\\System\\CurrentControlSet\\Control\\Terminal Server'/ //Partial match when cmd to enable remote desktop is ran
 //end of commands more to be added in time 
 
