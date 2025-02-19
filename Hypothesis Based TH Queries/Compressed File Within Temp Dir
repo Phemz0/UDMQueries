@@ -1,0 +1,21 @@
+//start of file paths. This section detects when compressed files are found in the temp dir, this is a marker of data exfil.
+(file_path = /C:\\Temp\\/ AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
+OR (file_path = /C:\\Windows\\Temp\\/ AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
+OR (file_path = /C:\\Users\\w\AppData\\Local\\Temp\\/ AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
+OR (file_path = /\/home\/\w\/Documents\// AND (src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR observer.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/
+ OR principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|tar\.lz|tar\.lzma|arj|zoo|lzh|iso|cab/))
