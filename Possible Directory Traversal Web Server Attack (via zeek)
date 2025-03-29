@@ -1,1 +1,0 @@
-(uri = /\.*\\\.\\\.\(\(%\[25f\]\)\|;\)\.*/ nocase or uri = /\.*%\(\(2\(\[fF\]\|55\[fFcC\]\)\)\|\(5\[cC\]\)\)\\\.\\\.\.*/ nocase or uri = /\.*%2\(\[eE5\]\[5\|2\]\?\)\+%2\.*/ nocase or uri = /\.*%\[cC\]1%\[aA\]\[fF\]\.*/ nocase) and ( not status_code = /^3.*/ and  not status_code = /^4.*/) and (response_body_len != "0" or uri = /.*\/.*/ nocase)
