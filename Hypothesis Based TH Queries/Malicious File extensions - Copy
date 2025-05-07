@@ -1,0 +1,3 @@
+file_path = /\.exe/ OR file_path = /\.bat/ OR file_path = /\.ps1/ OR file_path = /\.jar/  OR file_path = /\.reg/ OR file_path = /\.wsf/ 
+
+// add more or remove at will
