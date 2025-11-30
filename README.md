@@ -1,10 +1,10 @@
 UDM Queries for Google Chronicle
 
-A freely accessible collection of Unified Data Model (UDM) search queries designed for threat hunting, detection engineering, and security investigations within Google Chronicle (now Google Security Operations).
+A freely accessible collection of UDM search queries designed for threat hunting, detection engineering, and security investigations within Google Chronicle (now Google Security Operations).
 
 📂 Repository Structure
 
-This repository is organized into three primary categories to help security teams quickly find the relevant logic for their hunt:
+This repository is organised into three primary categories to help security teams quickly find the relevant logic for their hunt:
 
 1. 🛡️ CVE Based Queries
 
@@ -14,7 +14,7 @@ Examples: Log4Shell, ProxyNotShell, Follina, CVE-2024-3400 (GlobalProtect), Scre
 
 2. 🕵️ Hypothesis Based TH Queries
 
-Contains queries derived from threat hunting hypotheses and behavioral patterns. These are designed to catch "unknown unknowns" or Living-off-the-Land (LotL) techniques where no specific CVE is involved.
+Contains queries derived from threat hunting hypotheses and behavioural patterns. These are designed to catch "unknown unknowns" or Living-off-the-Land (LotL) techniques where no specific CVE is involved.
 
 Examples:
 
@@ -24,7 +24,7 @@ Lateral movement via WMI spawning shells.
 
 Shadow Copy deletion (Ransomware precursors).
 
-Unusual WHOAMI or localized reconnaissance.
+Unusual WHOAMI or localised reconnaissance.
 
 3. 🔍 Standard Queries
 
@@ -56,7 +56,7 @@ Adjust the Time Range (e.g., Last 24 Hours, Last 7 Days) depending on the scope 
 
 Run Search: Execute the query to view matching events.
 
-Tips for Customization
+Tips for Customisation
 
 Timestamps: UDM searches default to a specific window. Always verify your time range before running.
 
@@ -65,7 +65,8 @@ Field Filtering: If a query returns too much noise, consider adding exclusions f
 ... AND principal.hostname != "approved-scanner"
 
 
-Case Sensitivity: Most UDM fields are case-sensitive. Use nocase modifiers where appropriate (e.g., target.process.command_line = /malicious/ nocase).
+
+Case Sensitivity: Please have Case Sensitivity disabled (can be found next to time range)
 
 🤝 Contributing
 
