@@ -1,0 +1,12 @@
+metadata.event_type = "PROCESS_LAUNCH" AND
+(
+    target.process.file.full_path = /nmap/ OR
+    target.process.file.full_path = /masscan/ OR
+    target.process.file.full_path = /zenmap/
+) AND
+(
+    target.process.command_line = /-sS/ OR    // SYN Scan
+    target.process.command_line = /-sV/ OR    // Version Detection
+    target.process.command_line = /-O/ OR     // OS Detection
+    target.process.command_line = /-p-/       // Scan all ports
+)

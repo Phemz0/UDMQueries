@@ -1,0 +1,10 @@
+metadata.event_type = "PROCESS_LAUNCH" AND
+principal.process.file.full_path = /certutil\.exe$/ AND
+(
+    target.process.command_line = /urlcache/ OR
+    target.process.command_line = /verifyctl/
+) AND
+(
+    target.process.command_line = /http/ OR
+    target.process.command_line = /ftp/
+)

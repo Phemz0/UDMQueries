@@ -1,0 +1,13 @@
+metadata.event_type = "PROCESS_LAUNCH" AND
+(
+    target.process.command_line = /Invoke-BloodHound/ OR
+    target.process.command_line = /-CollectionMethod/ OR
+    target.process.command_line = /-Loop/ OR
+    target.process.command_line = /SharpHound/
+) AND
+(
+    target.process.command_line = /All/ OR
+    target.process.command_line = /LoggedOn/ OR
+    target.process.command_line = /Session/ OR
+    target.process.command_line = /ObjectProps/
+)

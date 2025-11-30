@@ -1,0 +1,7 @@
+metadata.product_name = "Azure Active Directory" AND
+metadata.event_type = "USER_RESOURCE_UPDATE_CONTENT" AND
+(
+    metadata.product_event_type = "Update conditional access policy" OR
+    metadata.product_event_type = "Delete conditional access policy"
+) AND
+security_result.action = "ALLOW"
